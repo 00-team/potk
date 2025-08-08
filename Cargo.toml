@@ -1,0 +1,11 @@
+[workspace]
+members = ["potk", "potk-macros"]
+resolver = "2"
+
+[workspace.package]
+edition = "2024"
+license-file = "./LICENSE"
+repository = "https://github.com/00-team/potk/"
+readme = "./README.md"
+keywords = ["00-team", "potk", "utils"]
+categories = ["development-tools"]

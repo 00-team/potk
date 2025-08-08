@@ -1,0 +1,23 @@
+[package]
+name = "potk"
+version = "0.1.0"
+description = "00-Team utilities"
+publish = true
+readme.workspace = true
+edition.workspace = true
+keywords.workspace = true
+repository.workspace = true
+categories.workspace = true
+license-file.workspace = true
+
+[dependencies]
+#potk-macros = "0.1.0"
+potk-macros = { path = "../potk-macros" }
+
+
+[lints.clippy]
+needless_return_with_question_mark = "allow"
+
+# [lints.rust]
+# dead_code = "allow"
+# unused = "allow"
