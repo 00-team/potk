@@ -11,8 +11,8 @@ categories.workspace = true
 license-file.workspace = true
 
 [dependencies]
-#potk-macros = "0.1.0"
-potk-macros = { path = "../potk-macros" }
+potk-macros = "0.1.0"
+# potk-macros = { path = "../potk-macros" }
 
 
 [lints.clippy]
