@@ -1,9 +1,34 @@
+mod add_assign;
+mod command;
 mod enum_code;
 mod enum_int;
 mod legacy;
 mod perms;
 
 use proc_macro::TokenStream;
+
+/// Example:
+/// ```ignore
+/// #[derive(Debug, Default, potk::Command)]
+/// enum MyCommands {
+///     #[default]
+///     Help,
+///     Run,
+///     Master { gene: shah::models::Gene }
+/// }
+/// ```
+#[proc_macro_derive(Command)]
+pub fn command(code: TokenStream) -> TokenStream {
+    command::command(code)
+}
+
+#[proc_macro_derive(PotkAddAssign)]
+pub fn add_assign(code: TokenStream) -> TokenStream {
+    let item = syn::parse_macro_input!(code as syn::ItemStruct);
+    add_assign::add_assign(item)
+        .unwrap_or_else(syn::Error::into_compile_error)
+        .into()
+}
 
 /// Example:
 /// ```
