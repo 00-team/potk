@@ -1,6 +1,6 @@
 [package]
 name = "potk"
-version = "1.0.0"
+version = "1.0.1"
 description = "00-Team utilities"
 publish = true
 readme.workspace = true
