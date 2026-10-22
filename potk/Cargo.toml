@@ -15,7 +15,7 @@ name = "potk"
 path = "lib.rs"
 
 [dependencies]
-potk-macros = "0.1.0"
+potk-macros = "1.0.0"
 # potk-macros = { path = "../potk-macros" }
 
 
