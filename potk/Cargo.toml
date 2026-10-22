@@ -1,6 +1,6 @@
 [package]
 name = "potk"
-version = "1.0.1"
+version = "1.1.0"
 description = "00-Team utilities"
 publish = true
 readme.workspace = true
@@ -15,8 +15,8 @@ name = "potk"
 path = "lib.rs"
 
 [dependencies]
-potk-macros = "1.0.0"
-# potk-macros = { path = "../potk-macros" }
+# potk-macros = "1.1.0"
+potk-macros = { path = "../potk-macros" }
 
 
 [lints.clippy]

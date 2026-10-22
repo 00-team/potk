@@ -134,7 +134,7 @@ struct ImplFrom {
 
 impl ImplFrom {
     fn from_item_impl(item: &syn::ItemImpl) -> syn::Result<Self> {
-        let Some((_, f, _)) = item.trait_.as_ref() else {
+        let Some((f, _)) = item.trait_.as_ref() else {
             return err!(item.span(), "impl Struct is not supported");
         };
 
